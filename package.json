@@ -1,0 +1,18 @@
+{
+  "name": "wuz",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "An app for complex Ollama integration to create a virtual assistant capable of device control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "ollama": "^0.5.8",
+    "ws": "^8.18.0"
+  }
+}
