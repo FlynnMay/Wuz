@@ -12,6 +12,9 @@ This is an excuse to show portfolio work in APIs, WebSockets, utilising multiple
 - [ ] Speaker output client
 - [ ] Discord input integration
 - [ ] Define API architecture
+- [ ] Custom commands from clients 
+- [ ] Spotify interaction client 
+- [ ] GUI 
 
 Much more to come!
 
