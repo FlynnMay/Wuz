@@ -34,7 +34,7 @@ wss.on("connection", (ws) => {
 
   wuz.on("processed", (payload) => {
     if (ws.readyState === WebSocket.OPEN) {
-      ws.send(payload.message.content);
+      ws.send(JSON.stringify({action: 'output', payload: payload.message.content}));
     }
   });
 
