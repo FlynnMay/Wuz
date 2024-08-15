@@ -14,3 +14,6 @@ This is an excuse to show portfolio work in APIs, WebSockets, utilising multiple
 - [ ] Define API architecture
 
 Much more to come!
+
+## Sample Extensions
+- [Wuz-Sample-Speaker](https://github.com/FlynnMay/Wuz-Sample-Speaker) - A basic implementation of a TTS output for [Wuz](https://github.com/FlynnMay/Wuz).
