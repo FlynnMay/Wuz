@@ -5,7 +5,7 @@
   "description": "An app for complex Ollama integration to create a virtual assistant capable of device control",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "express": "^4.19.2",
     "http": "^0.0.1-security",
     "ollama": "^0.5.8",
+    "uuid": "^10.0.0",
     "ws": "^8.18.0"
   }
 }
