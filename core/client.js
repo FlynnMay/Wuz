@@ -10,15 +10,14 @@ class Client {
         this.name = name;    
     }
 
-    addIntent(key, value, description = null) {
-        const intent = new Intent(key, value, description)
+    addIntent(value, description = null) {
+        const intent = new Intent(value, description)
         this.intents.push(intent);
     }
 }
 
 class Intent {
-    constructor(key, value, description = null) {
-        this.key = key;
+    constructor(value, description = null) {
         this.value = value;
         this.description = description;
     }

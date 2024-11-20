@@ -13,8 +13,8 @@ const set_name = (ws, message_data) => {
   
 const add_intent = (ws, message_data) => {
     const client = clients.find((c) => c.socket === ws);
-    client.addIntent(message_data.key, message_data.value, message_data.description);
-    ws.send(JSON.stringify({action: 'client_update', message: `intend added updated to ${client.name}: key=${message_data.key}, value=${message_data.value}, description=${message_data.description} `}));
+    client.addIntent(message_data.value, message_data.description);
+    ws.send(JSON.stringify({action: 'client_update', message: `intend added updated to ${client.name}: value=${message_data.value}, description=${message_data.description} `}));
 }
   
 const webSocketActions = {'get_id': get_id, 'set_name': set_name, 'add_intent': add_intent}

@@ -15,17 +15,15 @@ export const createWebsocket = (server) => {
         clients.push(client);
         wuz.addClient(client);
         
-        wuz.eventBus.on("processed", (payload) => {
-            const data_string = payload.message.content;
-            console.log(data_string);
-            const data = JSON.parse(data_string);
+        wuz.eventBus.on("processed", (data) => {
             const id = clients.find(c => c.socket === ws).id;
 
             if (ws.readyState === WebSocket.OPEN) {
-                if(data.is_command_response && data.application_id == id || client.name == "speaker")
+                const data_string = JSON.stringify(data);
+                if(data.is_command && data.application_id == id || client.name == "speaker")
                     ws.send(JSON.stringify({action: 'client_command', payload: data_string}));
                 else
-                ws.send(JSON.stringify({action: 'output', payload: data_string}));
+                    ws.send(JSON.stringify({action: 'output', payload: data_string}));
             }
         });
     
