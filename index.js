@@ -18,8 +18,19 @@ app.use('/api/v1/prompt', prompt)
 
 const server = http.createServer(app);
 
+// console.log(app._router.stack)
+
 createWebsocket(server);
 
 server.listen(port, () => {
   console.log(`Listening on: http://localhost:${port}`);
 });
+
+
+/*
+  Permissions and Intents
+  -------------------------
+  Each connected websocket should subscribe to an event such as speaker, etc.
+
+  
+*/
